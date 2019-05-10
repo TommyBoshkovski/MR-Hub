@@ -16,7 +16,7 @@
 
 
 <div class="col-md-6 mb-30px">
-    <button class="collapsible" style="   border: 3px solid red;    padding: 0px;    border-radius: 10px;">
+    <button class="collapsible" style="   border: 3px solid #91ceaf;    padding: 0px;    border-radius: 10px;">
     <div class="listfeaturedtag h-100">
         <div class="row" style="margin-left: 0px;    margin-right: 0px;">
            
@@ -47,12 +47,14 @@
             </div>
        
         </button>
-							<div class="content">
+							<div class="content" style="padding: 9px 9px 9px 9px; display: none; bacground-color: #fff8dc">
   							<h4>Description</h4>	 <p>{{ project.longDescription }}</p>
   							<h4>References</h4>
+  							<ol>
   							 {% for reference in project.keyReferences %}
-  							 <a href="{{ reference.referenceURL }}">{{ reference.referenceText }}</a> <br/>
+  							 <li><a href="{{ reference.referenceURL }}">{{ reference.referenceText }}</a></li> <br/>
   							 {% endfor %}
+  							</ol>
 							</div>
 	</div>
             {% endfor %}
