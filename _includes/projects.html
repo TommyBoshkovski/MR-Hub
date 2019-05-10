@@ -16,9 +16,9 @@
 
 
 <div class="col-md-6 mb-30px">
-    <button class="collapsible">
+    <button class="collapsible" style="   border: 3px solid red;    padding: 0px;    border-radius: 10px;">
     <div class="listfeaturedtag h-100">
-        <div class="row h-100">
+        <div class="row" style="margin-left: 0px;    margin-right: 0px;">
            
            
             <div>
@@ -28,18 +28,18 @@
                         <div class="card-body">
                         	<table border="0">
                         		<tr>
-                        			<td>
+                        			<td style="border: 1px solid white;">
                         				<img src="images_packages/{{ project.imageFile }}" style="max-width: 200px; max-height: 100px;"/>
                         			</td>
-                        			<td>
+                        			<td style="border: 1px solid white;">
                            				 <h2 class="card-title"><a class="text-dark" href="{{ project.name }}">{{ project.name }}</a></h2>
                            				 <h4 class="card-text" style="color:orange"><i><b>Category:</b></i> {{ project.category }}</h4>
                         			</td>
                         		</tr>
                         	</table>
-                            <h4 class="card-text"><i><b>Principles developers:</b></i> {{ project.principalDevelopers }}</h4>
-                            <h4 class="card-text">{{ project.shortDescription }}</h4>
-                            <h4 class="card-text">Key words: {% for wo in project.keywords %} {{ wo }}, {% endfor %}</h4> 
+                            <h4 class="card-text"><i><b>Principal developers:</b></i> {{ project.principalDevelopers }}</h4>
+                            <h4 class="card-text" style="color:orange">{{ project.shortDescription }}</h4>
+                            <h4 class="card-text"><i><b>Key words:</i></b> {% for wo in project.keywords %} {{ wo }}, {% endfor %}</h4> 
                         </div>
                         
                     </div>
