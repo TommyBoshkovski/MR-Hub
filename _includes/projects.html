@@ -1,0 +1,62 @@
+<div id="team" class="section">
+
+                <!-- Section header -->
+                <div class="section-header text-center">
+                    <h2 class="title">Projects</h2>
+                </div>
+    
+
+<!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+    {% for project in site.data.projects %}
+    <!--contributor -->
+
+
+<div class="col-md-6 mb-30px">
+    <button class="collapsible">
+    <div class="listfeaturedtag h-100">
+        <div class="row h-100">
+           
+           
+            <div>
+                <div class="h-100 card-group">
+                	
+                    <div class="card">
+                        <div class="card-body">
+                        	<table border="0">
+                        		<tr>
+                        			<td>
+                        				<img src="images_packages/{{ project.imageFile }}" width="200px" height="100px"/>
+                        			</td>
+                        			<td>
+                           				 <h2 class="card-title"><a class="text-dark" href="{{ project.name }}">{{ project.name }}</a></h2>
+                           				 <h4 class="card-text" style="color:orange"><i><b>Category:</b></i> {{ project.category }}</h4>
+                        			</td>
+                        		</tr>
+                        	</table>
+                            <h4 class="card-text"><i><b>Principles developers:</b></i> {{ project.principalDevelopers }}</h4>
+                            <h4 class="card-text">{{ project.shortDescription }}</h4>
+                            <h4 class="card-text">Key words: {% for wo in project.keywords %} {{ wo }}, {% endfor %}</h4> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+       
+        </button>
+							<div class="content">
+  							<h4>Description</h4>	 <p>{{ project.longDescription }}</p>
+  							<h4>References</h4>
+  							 {% for reference in project.keyReferences %}
+  							 <a href="{{ reference.referenceURL }}">{{ reference.referenceText }}</a> <br/>
+  							 {% endfor %}
+							</div>
+	</div>
+            {% endfor %}
+    </div>
+  </div>
+
+</div>
